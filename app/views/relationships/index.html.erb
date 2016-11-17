@@ -1,0 +1,10 @@
+<% provide :title, "Relationship" %>
+<div class="col-md-8">
+  <h3><%= @title %></h3>
+  <% if @users.any? %>
+    <ul class="users follow">
+      <%= render @users %>
+    </ul>
+    <%= will_paginate @users %>
+  <% end %>
+</div>
